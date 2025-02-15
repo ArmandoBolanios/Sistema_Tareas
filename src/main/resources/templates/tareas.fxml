@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21.0.6"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controlador.TareasControlador">
+
+    <Label layoutX="292.0" layoutY="14.0" text="Sistema de Tareas" textFill="#104de0">
+        <font>
+            <Font name="Roboto Black" size="26.0"/>
+        </font>
+    </Label>
+    <TableView fx:id="tareaTabla" layoutX="259.0" layoutY="89.0" onMouseClicked="#cargarTareaFormulario"
+               prefHeight="284.0" prefWidth="520.0">
+        <columns>
+            <TableColumn fx:id="idColumna" prefWidth="75.0" text="ID"/>
+            <TableColumn fx:id="tareaColumna" prefWidth="172.0" text="TAREA"/>
+            <TableColumn fx:id="responsableColumna" prefWidth="133.0" text="Responsable"/>
+            <TableColumn fx:id="estatusColumna" prefWidth="127.0" text="Estatus"/>
+        </columns>
+    </TableView>
+    <AnchorPane layoutX="26.0" layoutY="89.0" prefHeight="284.0" prefWidth="210.0"
+                style="-fx-background-color: #fbfbfb;">
+        <Label layoutX="14.0" layoutY="23.0" text="Tarea:">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="93.0" text="Responsable:">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtTarea" layoutX="11.0" layoutY="47.0" prefHeight="26.0" prefWidth="190.0">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="txtResponsable" layoutX="11.0" layoutY="116.0" prefHeight="26.0" prefWidth="190.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="txtEstatus" layoutX="10.0" layoutY="185.0" prefHeight="26.0" prefWidth="190.0">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <Label layoutX="15.0" layoutY="157.0" text="Estatus:">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+    <AnchorPane layoutX="26.0" layoutY="382.0" prefHeight="107.0" prefWidth="753.0">
+        <Button layoutX="29.0" layoutY="41.0" mnemonicParsing="false" onAction="#agregarTarea" prefHeight="28.0"
+                prefWidth="94.0" style="-fx-background-color: #1d3557;" text="Agregar" textFill="#fcfafa">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="214.0" layoutY="41.0" mnemonicParsing="false" onAction="#modificarTarea" prefHeight="28.0"
+                prefWidth="94.0" style="-fx-background-color: #1d3557;" text="Modificar" textFill="#fcfafa">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="377.0" layoutY="41.0" mnemonicParsing="false" onAction="#eliminarTarea" prefHeight="28.0"
+                prefWidth="109.0" style="-fx-background-color: #e63966;" text="Eliminar" textFill="#f1faee">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="572.0" layoutY="41.0" mnemonicParsing="false" onAction="#limpiarFormulario"
+                style="-fx-background-color: #ffd60a;" text="Limpiar Formulario">
+            <font>
+                <Font name="Roboto Regular" size="14.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+
+</AnchorPane>
